@@ -169,8 +169,12 @@
     </style>
 
     <script>
-
-        
+      var myFirstVariable = 54;
+      var mySecondVariable = 81;
+      function myFirstFunction()  {
+      mySecondVariable = mySecondVariable + 7;
+      mySecondVariable = myFirstVariable - 12;
+      }
     </script>
 </head>
 
@@ -192,24 +196,20 @@
 
 
     <div class="button1"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-       <button class="displayButton">
+     <button class ="displayButton" onclick = "myFirstFunction();">A</button>
 
-
-       </button> 
     </div>
 
     <div class="button2"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
         <button>
-
-
+          
         </button>
     </div>
 
     <div class="button3"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
-
-
-        </button>
+     <button>
+       
+     </button>
 
 
     </div>
@@ -224,10 +224,7 @@
    
     
     <div class="button5" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button class="displayButton">
-
-
-        </button>
+       <button class ="displayButton" onclick = "myFirstFunction();">B</button>
 
     </div>
     <div class="button6" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
@@ -252,10 +249,7 @@
 
     </div>
     <div class="button9" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button  class="displayButton">
-
-
-        </button>
+        <button class ="displayButton" onclick = "myFirstFunction();">C</button>
 
     </div>
 
