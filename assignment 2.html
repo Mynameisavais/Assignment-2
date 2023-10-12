@@ -169,11 +169,15 @@
     </style>
 
     <script>
-      var myFirstVariable = 54;
+       var myFirstVariable = 54;
       var mySecondVariable = 81;
+        var myThirdVariable = 73;
       function myFirstFunction()  {
+      myFirstVariable = myFirstVariable - 12;
       mySecondVariable = mySecondVariable + 7;
-      mySecondVariable = myFirstVariable - 12;
+      myThirdVariable = myThirdvariable + 3;  
+          document.getElementById("placeToShow").innerHTML = myFirstVariable;
+          document.getElementById("letter B").innerHTML= mySecondVariable;
       }
     </script>
 </head>
@@ -195,7 +199,7 @@
 
 
 
-    <div class="button1"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
+    <div class="button1"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" id="placeToShow" >
      <button class ="displayButton" onclick = "myFirstFunction();">A</button>
 
     </div>
@@ -223,7 +227,7 @@
     </div>
    
     
-    <div class="button5" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
+    <div class="button5" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" id="letter B" >
        <button class ="displayButton" onclick = "myFirstFunction();">B</button>
 
     </div>
