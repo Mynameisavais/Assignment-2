@@ -169,7 +169,6 @@
     </style>
 
     <script>
-    
         var myFirstVariable = 54;
       var mySecondVariable = 81;
           var myThirdVariable = 73;
@@ -221,6 +220,10 @@
             document.getElementById("letter b").innerHTML = mySecondVariable;
             document.getElementById("letter c").innerHTML = myThirdVariable;
         }
+         function myNinthFunction()  {
+            myThirdVariable = myThirdVariable + 7;
+            document.getElementById("letter c").innerHTML = myThirdVariable;
+         }
     </script>
 </head>
 
@@ -292,10 +295,8 @@
 
     </div>
     <div class="button12" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
+        <button onclick = "myNinthFunction();" id="letter C"><b>Raise C by 7</b></button>
 
-
-        </button>
 
     </div>
 
