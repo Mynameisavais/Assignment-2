@@ -172,7 +172,7 @@
     
         var myFirstVariable = 54;
       var mySecondVariable = 81;
-          var mythirdVariable = 73;
+          var myThirdVariable = 73;
       function myFirstFunction()  {
       myFirstvariable = myFirstVariable - 0;
           document.getElementById("placeToShow").innerHTML = myFirstVariable;  
@@ -197,11 +197,30 @@
         mySecondVariable = mySecondVariable - 0;
         document.getElementById("letter b").innerHTML = mySecondVariable;
       }
-      function myFifthFunction()  {
+      function myFifthFunction()   {
         myThirdVariable = myThirdVariable - 0;
         document.getElementById("letter c").innerHTML = myThirdVariable;
       }
-        
+        function mySixthFunction()  {
+            myFirstVariable = myFirstVariable * 2
+            mySecondVariable = mySecondVariable * 2
+            myThirdVariable = myThirdVariable * 2
+            document.getElementById("placeToShow").innerHTML = myFirstVariable;
+            document.getElementById("letter b").innerHTML = mySecondVariable;
+            document.getElementById("letter c").innerHTML = myThirdVariable;
+        }
+        function mySeventhFunction()  {
+            myFirstVariable = myFirstVariable + 10;
+            document.getElementById("placeToShow").innerHTML = myFirstVariable;
+        }
+        function myEighthFunction()  {
+            myFirstVariable = myFirstVariable / 2
+            mySecondVariable = mySecondVariable / 2
+            myThirdVariable = myThirdVariable / 2
+            document.getElementById("placeToShow").innerHTML = myFirstVariable;
+            document.getElementById("letter b").innerHTML = mySecondVariable;
+            document.getElementById("letter c").innerHTML = myThirdVariable;
+        }
     </script>
 </head>
 
@@ -228,7 +247,7 @@
     </div>
 
     <div class="button2"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button onclick="myFirstFunction();" id="placeToShow">Show A</button>
+        <button onclick="myFirstFunction();" id="placeToShow"><b>Show A</b></button>
     </div>
 
     <div class="button3"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
@@ -238,7 +257,7 @@
     </div>
 
     <div class="button4" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button onclick = "mySecondFunction();" id="placeToShow"<b>add 1 to all</b></button>
+        <button onclick = "mySecondFunction();" id="placeToShow"><b>add 1 to all</b></button>
 
     </div>
    
@@ -252,17 +271,11 @@
 
     </div>
     <div class="button7" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
-
-
-        </button>
+        <button onclick = "mySixthFunction();" id="placeToShow"><b>double all</b></button>
 
     </div>
     <div class="button8" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
-
-
-        </button>
+        <button onclick = "mySeventhFunction();" id="placeToShow"><b>add 10 to a</b></button>
 
     </div>
     <div class="button9" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" id="letter c">
@@ -275,10 +288,7 @@
 
     </div>
     <div class="button11" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
-
-
-        </button>
+        <button onclick = "myEighthFunction();" id="placeToShow"><b>halve all</b></button>
 
     </div>
     <div class="button12" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
