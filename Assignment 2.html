@@ -2,7 +2,7 @@
 <head>
     <title>Triple Number Tracker</title>
     <style>
-       body {
+        body {
         align-content: center;
         background-color: #680000;
         color: white;
@@ -75,7 +75,7 @@
           }
 
 
-          .button3 {
+          .button3  {
           grid-row-start: 5;
           grid-row-end: 6;
           grid-column-start: 1;
@@ -173,56 +173,70 @@
       var mySecondVariable = 81;
           var myThirdVariable = 73;
       function myFirstFunction()  {
-      myFirstvariable = myFirstVariable - 0;
-          document.getElementById("placeToShow").innerHTML = myFirstVariable;  
+      myFirstVariable = myFirstVariable - 0;
+          document.getElementById("placeToShow").innerHTML = "The Value of A is " + myFirstVariable;  
+      }
+      function Add1toA()  {
+      myFirstVariable = myFirstVariable + 1;
+          document.getElementById("placeToShow").innerHTML = "A has been increased by 1";  
+          if(myFirstVariable>=100)  { 
+            document.getElementById("disable").disabled = true;
+         
+        }
+      }
+      
+    
+      function Add1toB()  {
+      mySecondVariable = mySecondVariable + 1;
+          document.getElementById("placeToShow").innerHTML = "B has been increased by 1";  
+      }
+      function Add1toC()  {
+      myThirdVariable = myThirdVariable + 1;
+          document.getElementById("placeToShow").innerHTML = "C has been increased by 1";  
       }
       function mySecondFunction()  {
-          mySecondVariable = mySecondVariable + 1;
-      myThirdVariable = myThirdVariable + 1;
-      myFirstVariable = myFirstVariable + 1; 
-            document.getElementById("placeToShow").innerHTML = myFirstVariable;
-            document.getElementById("letter b").innerHTML = mySecondVariable;
-            document.getElementById("letter c").innerHTML = myThirdVariable;
+          mySecondVariable++;
+      myThirdVariable++; 
+      myFirstVariable++; 
+            document.getElementById("placeToShow").innerHTML = "All values have increased by 1";
         }
         function myThirdFunction()  {
-              mySecondVariable = 81;
+    mySecondVariable = 81;
       myThirdVariable = 73;
       myFirstVariable = 54; 
-            document.getElementById("placeToShow").innerHTML = myFirstVariable;
-            document.getElementById("letter b").innerHTML = mySecondVariable;
-            document.getElementById("letter c").innerHTML = myThirdVariable;
+            document.getElementById("placeToShow").innerHTML = "All Values have been reset";
+           
         }
       function myFourthFunction()  {
         mySecondVariable = mySecondVariable - 0;
-        document.getElementById("letter b").innerHTML = mySecondVariable;
+        document.getElementById("placeToShow").innerHTML = "The Value of B is " +  mySecondVariable;
       }
       function myFifthFunction()   {
         myThirdVariable = myThirdVariable - 0;
-        document.getElementById("letter c").innerHTML = myThirdVariable;
+        document.getElementById("placeToShow").innerHTML = "The Value of C is " + myThirdVariable;
       }
         function mySixthFunction()  {
             myFirstVariable = myFirstVariable * 2
             mySecondVariable = mySecondVariable * 2
             myThirdVariable = myThirdVariable * 2
-            document.getElementById("placeToShow").innerHTML = myFirstVariable;
-            document.getElementById("letter b").innerHTML = mySecondVariable;
-            document.getElementById("letter c").innerHTML = myThirdVariable;
+            document.getElementById("placeToShow").innerHTML = "All values have been doubled";
+           
         }
+            
         function mySeventhFunction()  {
             myFirstVariable = myFirstVariable + 10;
-            document.getElementById("placeToShow").innerHTML = myFirstVariable;
+            document.getElementById("placeToShow").innerHTML = "The Value of A has increased by 10";
         }
         function myEighthFunction()  {
-            myFirstVariable = myFirstVariable / 2
-            mySecondVariable = mySecondVariable / 2
-            myThirdVariable = myThirdVariable / 2
-            document.getElementById("placeToShow").innerHTML = myFirstVariable;
-            document.getElementById("letter b").innerHTML = mySecondVariable;
-            document.getElementById("letter c").innerHTML = myThirdVariable;
+            myFirstVariable = myFirstVariable / 2;
+            mySecondVariable = mySecondVariable / 2;
+            myThirdVariable = myThirdVariable / 2;
+            document.getElementById("placeToShow").innerHTML = "All variables have been divided by 2";
+            
         }
          function myNinthFunction()  {
             myThirdVariable = myThirdVariable + 7;
-            document.getElementById("letter c").innerHTML = myThirdVariable;
+            document.getElementById("placeToShow").innerHTML = "C has increased by 7";
          }
     </script>
 </head>
@@ -236,7 +250,7 @@
 
 
 
-    <div class="informationDisplay">
+    <div class="informationDisplay" id="placeToShow">
         Use the buttons below to activate the tracker!
 
       
@@ -245,32 +259,33 @@
 
 
     <div class="button1"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" id="placeToShow">
-     <button class ="displayButton"><b>A</b></button>
-
+     <button class ="displayButton" onclick="myFirstFunction();"><b>Show A</b></button>
+                             
     </div>
 
-    <div class="button2"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button onclick="myFirstFunction();" id="placeToShow"><b>Show A</b></button>
+    <div class="button2"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';">
+        <button id="disable" onclick ="Add1toA();"><b>Add 1 to A</b></button>
     </div>
 
     <div class="button3"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-      <button onclick = "myThirdFunction();" id="placeToShow"><b>reset all</b></button>
+      <button onclick = "mySeventhFunction();" id="placeToShow"><b>Add 10 to a</b></button>
 
 
     </div>
 
     <div class="button4" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button onclick = "mySecondFunction();" id="placeToShow"><b>add 1 to all</b></button>
+        <button onclick = "mySecondFunction();" id="placeToShow"><b>Add 1 to all</b></button>
 
     </div>
    
     
-    <div class="button5" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" id="letter b">
-       <button class ="displayButton"><b>B</b></button>
+    <div class="button5" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';">
+       <button class ="displayButton" onclick = "myFourthFunction();" id="placeToShow"><b>Show B</b></button>
 
     </div>
     <div class="button6" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button onclick = "myFourthFunction();" id="letter b"><b>Show B</b></button>
+        <button onclick="Add1toB();" id="placeToShow"><b>Add 1 to B</b></button> 
+        
 
     </div>
     <div class="button7" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
@@ -278,16 +293,21 @@
 
     </div>
     <div class="button8" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button onclick = "mySeventhFunction();" id="placeToShow"><b>add 10 to a</b></button>
+        <button onclick="myThirdFunction();" id="placeToShow"><b>Reset all values</b>
+
+        </button>
 
     </div>
-    <div class="button9" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" id="letter c">
-        <button class ="displayButton"><b>C</b></button>
+    <div class="button9" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
+        <button class ="displayButton"  onclick = "myFifthFunction();" id="placeToShow"><b>Show C</b></button>
 
     </div>
 
     <div class="button10" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-         <button onclick = "myFifthFunction();" id="letter c"><b>Show C</b></button>
+         <button onclick="Add1toC();" id="placeToShow"><b>Add 1 to C</b>
+
+
+         </button>
 
     </div>
     <div class="button11" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
@@ -295,13 +315,13 @@
 
     </div>
     <div class="button12" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button onclick = "myNinthFunction();" id="letter C"><b>Raise C by 7</b></button>
+        <button onclick = "myNinthFunction();" id="placeToShow"><b>Raise C by 7</b></button>
 
 
     </div>
 
     <div class="footer">
-        
+       
     </div>
     
 </body>
